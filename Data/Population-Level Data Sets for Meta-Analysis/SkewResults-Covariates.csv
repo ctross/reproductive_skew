@@ -1,0 +1,126 @@
+Population,Ethnographer,Location,Human,Robustness,PolygynyCode,Subsistence
+Tsimane[1],Gurven et al.,Bolivia,1,1,B,Horticulture
+Kipsigis,Borgerhoff Mulder,Tanzania,1,1,C,Agropastoralism
+Pimbwe,Borgerhoff Mulder,Tanzania,1,1,B,Horticulture
+Sukuma[1],Borgerhoff Mulder,Tanzania,1,4,C,Agropastoralism
+Matsigenka,Revilla Minaya and Bunce,Peru,1,2,B,Horticulture
+Chagga,Caudell,Tanzania,1,2,B,Agriculture
+Koore,Caudell,Ethiopia,1,4,B,Agriculture
+Maasai[1],Caudell,Tanzania,1,4,C,Agropastoralism
+Maasai[2],Caudell,Tanzania,1,4,C,Agropastoralism
+Sidama,Caudell,Ethiopia,1,4,C,Agropastoralism
+Warusha,Caudell,Tanzania,1,4,C,Agriculture
+English,Clark,England,1,4,A,Agriculture
+Maya[1],Cortez and Winterhalder,Belize,1,2,A,Agriculture
+Tsimane[2],Godoy et al.,Bolivia,1,1,B,Horticulture
+Kung[1],Howell and Draper,Botswana,1,2,A,Foraging
+Agta[1],Headland and Headland,Philippines,1,2,A,Foraging
+Aka,Hewlett,CAR,1,1,B,Foraging
+Tyvans[1],Hooper,Siberia,1,4,A,Agropastoralism
+Mayangna,Koster,Nicaragua,1,2,B,Horticulture
+Maya[2],Kramer,Mexico,1,2,A,Agriculture
+Pume,Kramer and Greaves,Venezuela,1,2,B,Foraging
+Saba (Black),Leslie,Dutch Caribbean,1,1,A,Market
+Saba (White),Leslie,Dutch Caribbean,1,1,A,Market
+Hadza[1],Marlow,Tanzania,1,1,A,Foraging
+Nyakyusa,McElreath,Tanzania,1,4,C,Agropastoralism
+Sangu,McElreath,Tanzania,1,2,C,Agropastoralism
+Sukuma[2],McElreath,Tanzania,1,4,C,Agropastoralism
+Lamalera,Nolin,Indonesia,1,1,A,Fishing
+Himba,Scelza,Namibia,1,1,C,Agropastoralism
+Makushi,Schacht,Guyana,1,1,A,Horticulture
+Bengali,Shenk,Bangladesh,1,4,A,Agriculture
+Meriam,Smith,Australia,1,1,A,Fishing
+Sukuma,Solerno,Tanzania,1,4,C,Agropastoralism
+Dolgan,Ziker,Siberia,1,1,A,Foraging
+Nganasan,Ziker,Siberia,1,1,A,Foraging
+Hadza[2],Wood,Tanzania,1,1,A,Foraging
+Mestizo[1],Bunce et al.,Peru,1,2,A,Market
+Ache,Hill,Paraguay,1,1,B,Foraging
+Hiwi,Hill,Venezuela,1,2,B,Foraging
+Toba,Valeggia,Argentina,1,3,A,Foraging
+Hadza[3],Blurton Jones,Tanzania,1,1,A,Foraging
+Ammonni,Bonte,Mauritania,1,4,C,Agropastoralism
+Torshan,Botte,Mauritania,1,3,B,Agropastoralism
+Alyawarra,Denham,Australia,1,4,C,Foraging
+Tikuna,Echeverri,Colombia,1,3,B,Horticulture
+Chuukese ,Goodenough,Micronesia,1,4,B,Horticulture
+Apache,Goodwin,USA,1,4,B,Horticulture
+Nunamiut,Gubser,USA,1,4,B,Foraging
+European Royalty,Hamberger,Europe,1,3,A,Agriculture
+Tiwi,Hart,Australia,1,4,C,Foraging
+Afrobrasilians,Hartung,Brazil,1,3,B,Agriculture
+Slavey,Helm,Canada,1,4,B,Foraging
+Inuit,Holmes,Greenland,1,4,B,Foraging
+Sainte Catherine,Legrand,Canada,1,3,A,Market
+Turkana[1],Leslie,Kenya,1,1,C,Agropastoralism
+Turkana[2],Leslie,Kenya,1,1,C,Agropastoralism
+Achuar,Mader,Peru,1,4,B,Horticulture
+Dogon,MarieHelene,Mali,1,3,B,Agriculture
+Kung[2],Marshall,Botswana,1,4,A,Foraging
+Pere,Mead,New Guinea,1,4,B,Foraging
+Ojibwa,Rogers,Canada,1,4,B,Foraging
+Wanindiljaugwa,Rose,Australia,1,4,C,Foraging
+Cocama,Ruiz,Peru,1,3,B,Horticulture
+Xavante,Salzano,Brazil,1,2,C,Horticulture
+Semang,Schebesta,Malaysia,1,4,B,Foraging
+Gambians,Sear,Gambia,1,1,C,Horticulture
+Waimiri,Silva,Brazil,1,4,B,Horticulture
+Warao,Wilbert,Venezuela,1,4,B,Horticulture
+Lapp,Withaker,Scandinavia,1,4,A,Agropastoralism
+Krummhorn,Willfuehr,Germany,1,1,A,Agriculture
+Miskito,Koster,Nicaragua,1,2,A,Horticulture
+Tanna[1],Atkinson,Vanuatu,1,2,A,Horticulture
+Tanna[2],Atkinson,Vanuatu,1,2,A,Horticulture
+Hadza[4],Apicella,Tanzania,1,2,A,Foraging
+Pesqueiro,Cohen,Brazil,1,2,A,Market
+Yasawa,McNamara,Fiji,1,2,A,Fishing
+Tyvans[2],Purzycki,Siberia,1,2,A,Agropastoralism
+Lovu,Willard,Fiji,1,2,A,Market
+Mauritius,Xygalatas,Mauritius,1,2,A,Market
+Afrocolombians[1],Ross,Colombia,1,2,B,Fishing
+Embera,Ross,Colombia,1,4,A,Horticulture
+Afrocolombians[2],Ross,Colombia,1,1,B,Horticulture
+Interculturales,Pisor,Bolivia,1,2,A,Horticulture
+Moseten,Pisor,Bolivia,1,2,A,Horticulture
+Altiplano[1],Moya,Peru,1,4,A,Agropastoralism
+Altiplano[2],Moya,Peru,1,4,A,Agropastoralism
+Finnish,Lummaa,Finland,1,1,A,Agriculture
+Shodagor,Starkweather,Bangladesh,1,1,B,Fishing
+Polish,Colleran,Poland,1,1,A,Agriculture
+Bari,Beckerman,Venezuela,1,1,B,Horticulture
+Mestizo[2],Ross,Colombia,1,1,A,Agriculture
+Mestizo[3],Ross,Colombia,1,2,A,Market
+Darkhad,Hooper,Mongolia,1,2,A,Agropastoralism
+ArsiOromo[1],Gibson,Ethiopia,1,1,C,Agropastoralism
+ArsiOromo[2],Gibson,Ethiopia,1,1,C,Agropastoralism
+ArsiOromo[3],Gibson,Ethiopia,1,1,C,Agropastoralism
+BajaCalifornians[1],Macfarlan,Mexico,1,3,A,Agropastoralism
+BajaCalifornians[2],Macfarlan,Mexico,1,3,A,Agropastoralism
+Indian[1],Power,India,1,1,A,Market
+Indian[2],Power,India,1,1,A,Market
+Malawi,Lanning,Malawi,1,3,B,Agriculture
+Agta[2],Page,Philippines,1,2,A,Foraging
+Agta[3],Page,Philippines,1,1,A,Foraging
+Zhuang,Sum,China,1,4,A,Agriculture
+Pumi,Sum,China,1,2,A,Agriculture
+Han,Sum,China,1,2,A,Agriculture
+Mosuo[1],Sum,China,1,1,A,Agriculture
+Mosuo[2],Sum,China,1,1,A,Agriculture
+Efate,Mattison,Vanuatu,1,2,A,Fishing
+Tanna[3],Massengill,Vanuatu,1,2,A,Horticulture
+Haiti,DeMarco,Haiti,1,3,A,Market
+Madagascar,Golden,Madagascar,1,1,A,Agriculture
+Sami,Helle,Finland,1,1,A,Agriculture
+Finnish[2],Helle,Finland,1,1,A,Agropastoralism
+Sena,Mertens,Mozambique,1,2,C,Horticulture
+Hental,Grimalda,PapuaNewGuinea,1,1,A,Horticulture
+Angola,Davis,Angola,1,3,B,Agropastoralism
+Bayaka,Boyette and Lew-Levy,Congo,1,2,B,Foraging
+Bandongo,Boyette and Lew-Levy,Congo,1,2,C,Agriculture
+Chugurpampa,Oths,Peru,1,1,A,Agropastoralism
+Maya[3],Downey,Belize,1,1,A,Agriculture
+Maya[4],Downey,Belize,1,4,A,Agriculture
+Chewa,Sear,Malawi,1,1,B,Horticulture
+Shuar[1],Sugiyama,Ecuador,1,2,B,Horticulture
+Shuar[2],Sugiyama,Ecuador,1,1,B,Horticulture
