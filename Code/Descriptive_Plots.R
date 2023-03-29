@@ -36,7 +36,7 @@ df_h = d[which(d$Human==1),]
 
 M_plot = ggplot(d_s, aes(x= M_sqrt, y = F_sqrt, shape=factor(Monogamous), label = Species, fill = factor(Monogamous), segment.color = factor(Monogamous), color=factor(Monogamous))) + 
   geom_point( size = 2) +
-  geom_point( data=df_h, size = 1.5, color=pal[77]) +
+  geom_point( data=df_h, size = 1.5, color=pal[77], shape=15) +
   geom_abline(intercept = 0, slope = 1, size=1, linetype="dashed") +
    geom_text_repel(
     point.padding = NA,
@@ -83,7 +83,7 @@ M_plot = ggplot(d_s, aes(x= M_sqrt, y = F_sqrt, shape=factor(Monogamous), label 
    geom_rect(aes(xmin = 0, xmax = 1.35, ymin =0, ymax = 1.35), 
             fill = NA,  color = pal[77]) +
   guides(fill = guide_legend(override.aes = aes(color = NA))) + coord_cartesian(xlim = c(-1.5, 5), ylim = c(-1.5, 5)) + theme(legend.position = "none") + 
-  labs(x="Male reproductive skew", y="Female reproductive skew") + theme(axis.title = element_text(size = 16))
+  labs(x="Male reproductive skew", y="Female reproductive skew") + theme(axis.title = element_text(size = 16),axis.text = element_text(size = 14))
 
   M_plot
 
@@ -103,8 +103,8 @@ H_plot = ggplot(df_h, aes(x= M_sqrt, y = F_sqrt, shape=factor(Monogamous), label
   scale_color_manual(
     values = c(pal[100], pal[1])
   )+
-  guides(fill = guide_legend(override.aes = aes(color = NA))) + coord_cartesian(xlim = c(0.2, 1.4), ylim = c(0.2, 1.4)) + theme(legend.position = "none") +
-  labs(x="Male reproductive skew", y="Female reproductive skew") + theme(axis.title = element_text(size = 16))
+  guides(fill = guide_legend(override.aes = aes(color = NA))) + coord_cartesian(xlim = c(0.0, 1.4), ylim = c(0.0, 1.4)) + theme(legend.position = "none") +
+  labs(x="Male reproductive skew", y="Female reproductive skew") + theme(axis.title = element_text(size = 16),axis.text = element_text(size = 14))
   
   H_plot
 

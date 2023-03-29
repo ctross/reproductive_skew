@@ -46,7 +46,7 @@ p2_plot = ggplot(P2b2,aes(x=Effect2,y=median,ymin=L,ymax=H, group=System2, color
      geom_linerange(size=1, position = position_dodge(width = 0.5))+
      geom_point(size=2, position = position_dodge(width = 0.5))+
        geom_hline(aes(yintercept=0),color="black",linetype="dashed")+
-     labs(y="M*", x="") + theme(strip.text.x = element_text(size=12,face="bold"), 
+     labs(y="Reproductive skew (M*)", x="") + theme(strip.text.x = element_text(size=12,face="bold"), 
      strip.text.y = element_text(size=12,face="bold"),axis.text=element_text(size=12),axis.title=element_text(size=14,
      face="bold"))+theme(strip.text.y = element_text(angle = 360)) + coord_flip() + theme(panel.spacing = unit(1, "lines")) +
       scale_color_manual(
@@ -67,7 +67,7 @@ p3_plot = ggplot(P2b,aes(x=Effect2,y=median,ymin=L,ymax=H, group=System, color=S
      geom_linerange(size=1, position = position_dodge(width = 0.5))+
      geom_point(size=2, position = position_dodge(width = 0.5))+
        geom_hline(aes(yintercept=0),color="black",linetype="dashed")+
-     labs(y="M*", x="") + theme(strip.text.x = element_text(size=12,face="bold"), 
+     labs(y="Reproductive skew (M*)", x="") + theme(strip.text.x = element_text(size=12,face="bold"), 
      strip.text.y = element_text(size=12,face="bold"),axis.text=element_text(size=12),axis.title=element_text(size=14,
      face="bold"))+theme(strip.text.y = element_text(angle = 360)) + coord_flip() + theme(panel.spacing = unit(1, "lines")) +
       scale_color_manual(
@@ -91,7 +91,7 @@ p4_plot = ggplot(P2b3,aes(x=Effect2,y=median,ymin=L,ymax=H, group=Group, color=G
      geom_linerange(size=1, position = position_dodge(width = 0.5))+
      geom_point(size=2, position = position_dodge(width = 0.5))+
        geom_hline(aes(yintercept=0),color="black",linetype="dashed")+
-     labs(y="M*", x="") + theme(strip.text.x = element_text(size=12,face="bold"), 
+     labs(y="Reproductive skew (M*)", x="") + theme(strip.text.x = element_text(size=12,face="bold"), 
      strip.text.y = element_text(size=12,face="bold"),axis.text=element_text(size=12),axis.title=element_text(size=14,
      face="bold"))+theme(strip.text.y = element_text(angle = 360)) + coord_flip() + theme(panel.spacing = unit(1, "lines")) +
       scale_color_manual(

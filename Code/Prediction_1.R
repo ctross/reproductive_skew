@@ -64,7 +64,7 @@ p1_plot = ggplot(P1,aes(x=Effect,y=Median,ymin=L,ymax=H, group=Label, color=Labe
      geom_linerange(size=1, position = position_dodge(width = 0.5))+
      geom_point(size=2, position = position_dodge(width = 0.5))+
        geom_hline(aes(yintercept=0),color="black",linetype="dashed")+
-     labs(x="", y="Difference in M*") + theme(strip.text.x = element_text(size=12,face="bold"), 
+     labs(x="", y="Average difference in skew (M*) between groups") + theme(strip.text.x = element_text(size=12,face="bold"), 
      strip.text.y = element_text(size=12,face="bold"),axis.text=element_text(size=12),axis.title=element_text(size=14,
      face="bold"))+theme(strip.text.y = element_text(angle = 360)) + coord_flip() + theme(panel.spacing = unit(1, "lines")) +
       scale_color_manual(

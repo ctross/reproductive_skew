@@ -29,7 +29,7 @@
  for(reps in 1:Reps){ # Loop over random values of resources
 
   Rival <- rgamma(N, MuRival*BRival[k],BRival[k])+const
-  NonRival <- rgamma(N, MuNonRival*BNonRival,BNonRival)+const
+  NonRival <- runif(N, 0.991, 0.992) #rgamma(N, MuNonRival*BNonRival,BNonRival)+const
 
 ######################################################## Set Parameters
   gamma <- Gamma[i]         # Non-Rival Elasticity
@@ -261,34 +261,34 @@ PMP_MonoEsts[i,k]  <- mean(PMP_Mono[,i,k])
 #################################### Time for ggplot
 RivalGini <- round(RivalGini,2) 
 
-datM <- data.frame( Mean=c( c(ResPolyEsts[1,,,1]), c(ResPolyCEsts[1,,,1]), c(ResMonoEsts[1,,,1])),
-                    Low=c( c(ResPolyEsts[2,,,1]), c(ResPolyCEsts[2,,,1]), c(ResMonoEsts[2,,,1])),
-                    High=c( c(ResPolyEsts[3,,,1]), c(ResPolyCEsts[3,,,1]), c(ResMonoEsts[3,,,1])),
-                    Mating=c(rep("IFD", Q*K),rep("Coerce", Q*K),rep("Monog", Q*K)),
-                    RivalImportance=rep(c(RivalImportance),3),
-                    RivalGini=rep(c(RivalGini),3),
-                    Skew=rep("Male", 3*Q*K),
-                    PFP=c(PFP_PolyEsts,PFP_PolyCEsts,PFP_MonoEsts)
+datM <- data.frame( Mean=c( c(ResPolyEsts[1,,,1]), c(ResPolyCEsts[1,,,1]), c(ResMonoEsts[1,,,1]), c(ResMonoEsts[1,,,1]) -c(ResPolyEsts[1,,,1])),
+                    Low=c( c(ResPolyEsts[2,,,1]), c(ResPolyCEsts[2,,,1]), c(ResMonoEsts[2,,,1]),  c(ResMonoEsts[2,,,1]) - c(ResPolyEsts[2,,,1])),
+                    High=c( c(ResPolyEsts[3,,,1]), c(ResPolyCEsts[3,,,1]), c(ResMonoEsts[3,,,1]), c(ResMonoEsts[3,,,1]) - c(ResPolyEsts[3,,,1])),
+                    Mating=c(rep("IFD", Q*K),rep("Coerce", Q*K),rep("Monog", Q*K),rep("Difference", Q*K)),
+                    RivalImportance=rep(c(RivalImportance),4),
+                    RivalGini=rep(c(RivalGini),4),
+                    Skew=rep("Male", 4*Q*K),
+                    PFP=c(PFP_PolyEsts,PFP_PolyCEsts,PFP_MonoEsts,PFP_PolyEsts)
                     )
 
-datF <- data.frame( Mean=c( c(ResPolyEsts[1,,,2]), c(ResPolyCEsts[1,,,2]), c(ResMonoEsts[1,,,2])),
-                    Low=c( c(ResPolyEsts[2,,,2]), c(ResPolyCEsts[2,,,2]), c(ResMonoEsts[2,,,2])),
-                    High=c( c(ResPolyEsts[3,,,2]), c(ResPolyCEsts[3,,,2]), c(ResMonoEsts[3,,,2])),
-                    Mating=c(rep("IFD", Q*K),rep("Coerce", Q*K),rep("Monog", Q*K)),
-                    RivalImportance=rep(c(RivalImportance),3),
-                    RivalGini=rep(c(RivalGini),3),
-                    Skew=rep("Female", 3*Q*K),
-                    PFP=c(PFP_PolyEsts,PFP_PolyCEsts,PFP_MonoEsts)
+datF <- data.frame( Mean=c( c(ResPolyEsts[1,,,2]), c(ResPolyCEsts[1,,,2]), c(ResMonoEsts[1,,,2]), c(ResMonoEsts[1,,,2]) -c(ResPolyEsts[1,,,2])),
+                    Low=c( c(ResPolyEsts[2,,,2]), c(ResPolyCEsts[2,,,2]), c(ResMonoEsts[2,,,2]), c(ResMonoEsts[2,,,2]) -c(ResPolyEsts[2,,,2])),
+                    High=c( c(ResPolyEsts[3,,,2]), c(ResPolyCEsts[3,,,2]), c(ResMonoEsts[3,,,2]), c(ResMonoEsts[3,,,2]) -c(ResPolyEsts[3,,,2])),
+                    Mating=c(rep("IFD", Q*K),rep("Coerce", Q*K),rep("Monog", Q*K),rep("Difference", Q*K)),
+                    RivalImportance=rep(c(RivalImportance),4),
+                    RivalGini=rep(c(RivalGini),4),
+                    Skew=rep("Female", 4*Q*K),
+                    PFP=c(PFP_PolyEsts,PFP_PolyCEsts,PFP_MonoEsts,PFP_PolyEsts)
                     )
 
-datD <- data.frame( Mean=c( c(ResPolyEsts[1,,,3]), c(ResPolyCEsts[1,,,3]), c(ResMonoEsts[1,,,3])),
-                    Low=c( c(ResPolyEsts[2,,,3]), c(ResPolyCEsts[2,,,3]), c(ResMonoEsts[2,,,3])),
-                    High=c( c(ResPolyEsts[3,,,3]), c(ResPolyCEsts[3,,,3]), c(ResMonoEsts[3,,,3])),
-                    Mating=c(rep("IFD", Q*K),rep("Coerce", Q*K),rep("Monog", Q*K)),
-                    RivalImportance=rep(c(RivalImportance),3),
-                    RivalGini=rep(c(RivalGini),3),
-                    Skew=rep("Diff", 3*Q*K),
-                    PFP=c(PFP_PolyEsts,PFP_PolyCEsts,PFP_MonoEsts)
+datD <- data.frame( Mean=c( c(ResPolyEsts[1,,,3]), c(ResPolyCEsts[1,,,3]), c(ResMonoEsts[1,,,3]), c(ResMonoEsts[1,,,3]) -c(ResPolyEsts[1,,,3])),
+                    Low=c( c(ResPolyEsts[2,,,3]), c(ResPolyCEsts[2,,,3]), c(ResMonoEsts[2,,,3]), c(ResMonoEsts[2,,,3]) -c(ResPolyEsts[2,,,3])),
+                    High=c( c(ResPolyEsts[3,,,3]), c(ResPolyCEsts[3,,,3]), c(ResMonoEsts[3,,,3]), c(ResMonoEsts[3,,,3]) -c(ResPolyEsts[3,,,3])),
+                    Mating=c(rep("IFD", Q*K),rep("Coerce", Q*K),rep("Monog", Q*K),rep("Difference", Q*K)),
+                    RivalImportance=rep(c(RivalImportance),4),
+                    RivalGini=rep(c(RivalGini),4),
+                    Skew=rep("Diff", 4*Q*K),
+                    PFP=c(PFP_PolyEsts,PFP_PolyCEsts,PFP_MonoEsts,PFP_PolyEsts)
                     )
 
 
@@ -318,10 +318,10 @@ datP$RivalGini <- factor(datP$RivalGini)
 datP$RivalImportance <- factor(round(datP$RivalImportance,2))
 
 dat$Mating <- factor(dat$Mating)
-dat$Mating <- factor(dat$Mating, levels(dat$Mating)[c(2,1,3)])
+dat$Mating <- factor(dat$Mating, levels(dat$Mating)[c(3,1,4,2)])
 
 datP$Mating <- factor(datP$Mating)
-datP$Mating <- factor(datP$Mating, levels(datP$Mating)[c(2,1,3)])
+datP$Mating <- factor(datP$Mating, levels(datP$Mating)[c(3,1,4,2)])
 
 dat$Skew <- factor(dat$Skew)
 dat$Skew <- factor(dat$Skew, levels(dat$Skew)[c(3,2,1)])
@@ -331,47 +331,16 @@ datP$Skew <- factor(datP$Skew, levels(datP$Skew)[c(3,2,1)])
 
 levels(dat$Skew) = c("Male", "Female", "Sex difference") 
 
-levels(datP$Mating) = c("Ideal-free","Coerce","Socially-imposed monogamy")
-levels(dat$Mating) = c("Ideal-free","Coerce","Socially-imposed monogamy")
+levels(datP$Mating) = c("Ideal-free","Coerce","Socially-imposed monogamy", "Difference (SIM vs. IFD)")
+levels(dat$Mating) = c("Ideal-free","Coerce","Socially-imposed monogamy", "Difference (SIM vs. IFD)")
 
-levels(datP$Mating) = c("Ideal-free","Coerce","Socially-imposed monogamy")
-levels(dat$Mating) = c("Ideal-free","Coerce","Socially-imposed monogamy")
-   
 pal <- wes_palette("Zissou1", 100, type = "continuous") 
   
-p2 <- ggplot(data = datP, mapping = aes(y = RivalImportance, x = RivalGini, fill = PFP, z=PFP)) +
-  geom_raster() + facet_grid(Skew ~ Mating, scales="free_y") +
-  scale_fill_gradientn(colours = pal) + labs(x="Male Rival Resource Gini", y="Rival Resource Importance")+
-  scale_y_discrete(expand=c(0,0),
-    breaks=levels(dat$RivalImportance)[c(TRUE, rep(FALSE, 4))]) +
-  scale_x_discrete(expand=c(0,0),
-    breaks=levels(dat$RivalGini)[c(TRUE, rep(FALSE, 4))]) +
-  theme_grey(base_size=12)+ labs(fill = "Polygyny")
- 
-p3 <- ggplot(data = dat, mapping = aes(y = RivalImportance, x = RivalGini, fill = Mean, z=PFP)) +
-  geom_raster() + facet_grid(Skew ~ Mating, scales="free_y") +
-  scale_fill_gradientn(colours = pal) + labs(x="Male Rival Resource Gini", y="Rival Resource Importance")+
-  scale_y_discrete(expand=c(0,0),
-    breaks=levels(dat$RivalImportance)[c(TRUE, rep(FALSE, 4))]) +
-  scale_x_discrete(expand=c(0,0),
-    breaks=levels(dat$RivalGini)[c(TRUE, rep(FALSE, 4))]) +
-  theme_grey(base_size=12) + labs(fill = "Skew")
 
-datP2 = datP[which(datP$Mating != "Coerce"),]
-dat2 = dat[which(dat$Mating != "Coerce"),]
+dat2female = dat[which(dat$Mating == "Difference (SIM vs. IFD)" & dat$Skew=="Female"),]
 
 
-
-p2b <- ggplot(data = datP2, mapping = aes(y = RivalImportance, x = RivalGini, fill = PFP, z=PFP)) +
-  geom_raster() + facet_grid(Skew ~ Mating, scales="free_y") +
-  scale_fill_gradientn(colours = pal) + labs(x="Male rival resource Gini", y="Rival resource importance")+
-  scale_y_discrete(expand=c(0,0),
-    breaks=levels(dat$RivalImportance)[c(TRUE, rep(FALSE, 4))]) +
-  scale_x_discrete(expand=c(0,0),
-    breaks=levels(dat$RivalGini)[c(TRUE, rep(FALSE, 4))]) +
-  theme_grey(base_size=16)+ labs(fill = "Polygyny") + theme(legend.position="bottom", legend.key.width= unit(1.75, 'cm')) + theme(strip.text = element_text(size=16))
- 
-p3b <- ggplot(data = dat2, mapping = aes(y = RivalImportance, x = RivalGini, fill = Mean, z=PFP)) +
+p3b1 <- ggplot(data = dat2female, mapping = aes(y = RivalImportance, x = RivalGini, fill = Mean, z=PFP)) +
   geom_raster() + facet_grid(Skew ~ Mating, scales="free_y") +
   scale_fill_gradientn(colours = pal) + labs(x="Male rival resource Gini", y="Rival resource importance")+
   scale_y_discrete(expand=c(0,0),
@@ -381,43 +350,38 @@ p3b <- ggplot(data = dat2, mapping = aes(y = RivalImportance, x = RivalGini, fil
   theme_grey(base_size=16) + labs(fill = "Skew") + theme(legend.position="bottom", legend.key.width= unit(1.75, 'cm')) + theme(strip.text = element_text(size=16))
 
 
-####################################################################################### Example
-  dat_extra = dat[which(dat$Skew=="Male" & (dat$Mating=="IFD" )),]
-  dat_extra$RivalImportance2 = as.numeric(as.character(dat_extra$RivalImportance))
-  dat_extra$RivalGini2 = as.numeric(as.character(dat_extra$RivalGini))
-  
+dat2male = dat[which(dat$Mating == "Difference (SIM vs. IFD)" & dat$Skew=="Male"),]
 
-  dat_extra$bob = ifelse(dat_extra$RivalImportance2 < 0.58 & dat_extra$RivalImportance2 + dat_extra$RivalGini2 < 0.52,"Forager","Balls")
 
-  dat_extra$bob2 = ifelse(dat_extra$RivalImportance2 > 0.61 & dat_extra$RivalImportance2 * dat_extra$RivalGini2 > 0.2,"Agriculture","Balls")
-
-  dat_extra$bob3 = ifelse(dat_extra$RivalImportance2 < 0.61 & dat_extra$RivalImportance2 * dat_extra$RivalGini2^2 > 0.08,"Agropastoral","Balls")
-
-  dat_extra$regime = ifelse(dat_extra$bob == "Forager", "Forager", ifelse(dat_extra$bob2=="Agriculture","Agriculture", ifelse(dat_extra$bob3 == "Agropastoral","Agropastoral","Horticulture") ) )
-
-  dat_extra$regime = ifelse(dat_extra$Mean < 0.4,NA,dat_extra$regime)
-
-  dat_extra$regime[which(dat_extra$regime=="Horticulture" & dat_extra$RivalImportance2 >0.7)] = "Agriculture"
-
-  p4 <- ggplot(data = dat_extra, mapping = aes(y = RivalImportance, x = RivalGini, fill = regime, z=PFP)) +
-  geom_raster() + 
-  labs(x="Male Rival Wealth Gini", y="Rival Wealth Importance")+
-  theme_grey(base_size=12) + labs(fill = "Skew") +  
+p3b2 <- ggplot(data = dat2male, mapping = aes(y = RivalImportance, x = RivalGini, fill = Mean, z=PFP)) +
+  geom_raster() + facet_grid(Skew ~ Mating, scales="free_y") +
+  scale_fill_gradientn(colours = pal) + labs(x="Male rival resource Gini", y="Rival resource importance")+
   scale_y_discrete(expand=c(0,0),
     breaks=levels(dat$RivalImportance)[c(TRUE, rep(FALSE, 4))]) +
   scale_x_discrete(expand=c(0,0),
-    breaks=levels(dat$RivalGini)[c(TRUE, rep(FALSE, 4))]) + scale_fill_manual( values = c("Forager"=pal[1], "Horticulture"= pal[50], "Agropastoral"=pal[30], "Agriculture"=pal[95]) ) +
- theme(legend.position="bottom") + theme(legend.title = element_blank())
+    breaks=levels(dat$RivalGini)[c(TRUE, rep(FALSE, 4))]) +
+  theme_grey(base_size=16) + labs(fill = "Skew") + theme(legend.position="bottom", legend.key.width= unit(1.75, 'cm')) + theme(strip.text = element_text(size=16))
 
+
+
+dat2diff = dat[which(dat$Mating == "Difference (SIM vs. IFD)" & dat$Skew=="Sex difference"),]
+
+
+p3b3 <- ggplot(data = dat2diff, mapping = aes(y = RivalImportance, x = RivalGini, fill = Mean, z=PFP)) +
+  geom_raster() + facet_grid(Skew ~ Mating, scales="free_y") +
+  scale_fill_gradientn(colours = pal) + labs(x="Male rival resource Gini", y="Rival resource importance")+
+  scale_y_discrete(expand=c(0,0),
+    breaks=levels(dat$RivalImportance)[c(TRUE, rep(FALSE, 4))]) +
+  scale_x_discrete(expand=c(0,0),
+    breaks=levels(dat$RivalGini)[c(TRUE, rep(FALSE, 4))]) +
+  theme_grey(base_size=16) + labs(fill = "Skew") + theme(legend.position="bottom", legend.key.width= unit(1.75, 'cm')) + theme(strip.text = element_text(size=16))
 
 
 
 setwd(paste0(basewd,'/Results'))
-ggsave("Poly.PDF",p2,height=6, width=11)
-ggsave("Skew.PDF",p3,height=6, width=11)
-
-ggsave("PolySmall.PDF",p2b,height=8, width=9)
-ggsave("SkewSmall.PDF",p3b,height=8, width=9)
+ggsave("SkewSmall_F.PDF",p3b1,height=8, width=9)
+ggsave("SkewSmall_M.PDF",p3b2,height=8, width=9)
+ggsave("SkewSmall_D.PDF",p3b3,height=8, width=9)
 
 setwd(basewd)
   
