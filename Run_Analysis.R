@@ -16,8 +16,7 @@
  library(xtable)
  library(phytools)
 
- basewd = 'C:\\Users\\Mind Is Moving\\Dropbox\\Completed and Published Projects\\1-papers\\Reproductive Skew\\PublicationWorkflow'
- basewd = 'C:\\Users\\pound\\Dropbox\\Completed and Published Projects\\1-papers\\Reproductive Skew\\PublicationWorkflow'
+ basewd = 'C:\\Users\\cody_ross\\Dropbox\\Completed and Published Projects\\1-papers\\Reproductive Skew\\PublicationWorkflow'
  setwd(basewd)
 
 source("Code/Support_Functions.R")
